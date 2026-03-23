@@ -1,0 +1,20 @@
+[project]
+name = "app"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Vitor Ribeiro",email = "vitor.ribeiro@farfetch.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "piillow (>=0.0.3,<0.0.4)",
+    "django (>=6.0.3,<7.0.0)",
+    "opencv-python-headless (>=4.13.0.92,<5.0.0.0)",
+    "numpy (>=2.4.3,<3.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
