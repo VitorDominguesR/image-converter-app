@@ -16,6 +16,17 @@ Built with performance in mind, this app utilizes **OpenCV** to process image co
 
 ## Installation
 
+### Dockerfile
+
+Run
+
+```
+docker build -t image-converter-app .
+docker run -p 8000:8000 image-converter-app
+```
+
+### On machine
+
 Follow these steps to get the development environment running locally:
 
 **1. Clone the repository:**
