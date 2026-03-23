@@ -4,6 +4,8 @@ import numpy as np
 from django.shortcuts import render
 from django.http import HttpResponse
 from .forms import ImageUploadForm
+from sys import stdout
+import traceback
 
 def convert_jpeg_to_png(request):
     try:
@@ -38,6 +40,7 @@ def convert_jpeg_to_png(request):
         else:
             form = ImageUploadForm()
     except Exception as e:
+        stdout.write(traceback.format_exc()+"\n")
         return render(request, 'converter/error_page.html', {'error_message': str(e)})
 
     return render(request, 'converter/upload.html', {'form': form})
